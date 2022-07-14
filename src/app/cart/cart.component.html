@@ -8,16 +8,15 @@
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>
-<a *ngFor="let emp of items;let b=index" (click)="deleteEmployee(b)">
+<div>
+  <a *ngFor="let i of items;let b=index" (click)="deleteEmployee(b)">
   <i class="material-icons">delete</i></a>
-
-
-
+</div>
 
 </div>
 
 
-  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" *ngFor="a()">
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" *ngIf="a">
       <div>
         <label for="name">Name</label>
         <input id="name" type="text" formControlName="name">

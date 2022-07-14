@@ -19,6 +19,10 @@ export class CartService {
       this.items = [];
       return this.items;
   }
+  countCart(){
+    this.items = [];
+    return this.items.length;
+  }
   
   constructor(
         private http: HttpClient
