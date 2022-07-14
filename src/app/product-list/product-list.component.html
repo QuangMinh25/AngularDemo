@@ -14,9 +14,9 @@
     Description: {{ product.description }}
   </p>
 
-  <button type="button" (click)="share()">
-    Share
-  </button>
+  <button (click)="share(product)">
+            Share
+        </button>
   
   <app-product-alerts
   [product]="product" 

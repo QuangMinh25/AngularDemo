@@ -12,18 +12,21 @@ import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 
- 
+
 @NgModule({
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
-      { path: 'cart', component: CartComponent },
-      { path: 'shipping', component: ShippingComponent },
+  imports: 
+  [ RouterModule.forRoot([
+          { path: '', component: ProductListComponent },
+          { path: 'products/:productId', component: ProductDetailsComponent },
+          { path: 'cart', component: CartComponent },
+          { path: 'shipping', component: ShippingComponent },
     ])
+    ,
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  
+      
   ],
   declarations: [
     AppComponent,
@@ -37,6 +40,18 @@ import { ShippingComponent } from './shipping/shipping.component';
   bootstrap: [
     AppComponent
   ]
+  
 })
-export class AppModule { }
 
+  
+export class AppModule {
+
+
+ }
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
